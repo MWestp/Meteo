@@ -1,3 +1,5 @@
+hallo, hier ist Luc
+
 setwd("C:/Users/westp/OneDrive/Desktop/Data_Science/Meteolytix/")
 
 # Dateien einlesen
