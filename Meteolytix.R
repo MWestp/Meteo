@@ -82,7 +82,7 @@ my_sum <- data_compl %>%
 
 ggplot(my_sum) +
   geom_bar( aes(x=year, y=mean), stat="identity", fill="forestgreen", alpha=0.5) +
-  geom_errorbar( aes(x=year, ymin=mean-sd, ymax=mean+sd), width=0.4, colour="orange", alpha=0.9, size=1.5) +
+  geom_errorbar( aes(x=year, ymin=mean-sd, ymax=mean+sd), width=100, colour="orange", alpha=0.9, size=1) +
   ggtitle("barplot mean of sales per year with standard deviation")
 
 ggplot(data = dat) +
