@@ -89,5 +89,36 @@ ggplot(data = dat) +
   theme_minimal()
 
 
+#############################
+
+library(dplyr)
+
+data(mtcars)
+
+tibble(mtcars)
+
+mtcars <- mpg %>%
+  group_by(cyl) %>%
+  summarise(n(), t.test(cty,hwy)$p.value)
+
+economics %>%
+  mutate(weekday=wday(date))
+
+
+data_m <- data_compl %>%
+  mutate(month = month (Date)) %>%
+  group_by(month) %>%
+  summarise(total = sum(Sales))
+
+ggplot(data_m, aes(x=month, y=total)) + geom_point() # Summe der Verkäufe je Monat (alle Jahre aggregiert) wird im Punktdiagramm dargestellt
+
+
+ggplot(data = data_m) +
+  aes(x = month, y = total) +
+  geom_line(color = "#ef562d") +
+  labs(title = "Aggregierte Verkäufe pro Monat",
+       x = "Monate",
+       y = "Euro") +
+  theme_grey()
 
 
