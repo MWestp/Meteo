@@ -1,4 +1,4 @@
-hallo, hier ist Luc
+hallo
 
 setwd("C:/Users/westp/OneDrive/Desktop/Data_Science/Meteolytix/")
 
